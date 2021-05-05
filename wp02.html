@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>HTML02</title>
+</head>
+<body>
+ <h3> Text content : </h3>
+ <p>Which of the following statements about the &lt;div&gt; tag is true?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">This tag is the generic container for flow content.<br>
+  <input type="radio" name="blockquote" value="v2">This tag is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance.<br>
+  <input type="radio" name="blockquote" value="v3">This tag produces a line break in text (carriage-return).<br>
+  <input type="radio" name="blockquote" value="v4">This tag is a generic inline container for phrasing content, which does not inherently represent anything.<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[0].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wp03.html'">Question 3</button>
+</body>
+</html>
