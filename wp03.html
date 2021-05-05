@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>HTML03</title>
+</head>
+<body>
+ <h3> Text content : </h3>
+ <p>Which of the following statements about the &lt;br&gt; tag is true?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">This tag is used to draw the reader's attention to the element's contents.<br>
+  <input type="radio" name="blockquote" value="v2">This tag represents a thematic break between paragraph-level elements.<br>
+  <input type="radio" name="blockquote" value="v3">This tag produces a line break in text (carriage-return).<br>
+  <input type="radio" name="blockquote" value="v4">This tag represents a paragraph.<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[2].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wp04.html'">Question 3</button>
+</body>
+</html>
