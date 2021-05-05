@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>HTML07</title>
+</head>
+<body>
+ <h3> Inline text semantics : </h3>
+ <p>Which of the following statements about the &lt;span&gt; tag is true?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">This tag epresents the name of a variable in a mathematical expression or a programming context.<br>
+  <input type="radio" name="blockquote" value="v2">This tag is a generic inline container for phrasing content, which does not inherently represent anything.<br>
+  <input type="radio" name="blockquote" value="v3">This tag renders text with a strikethrough, or a line through it.<br>
+  <input type="radio" name="blockquote" value="v4">This tag displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[1].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wp09.html'">Question 9</button>
+</body>
+</html>
