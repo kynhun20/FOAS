@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>HTML06</title>
+</head>
+<body>
+ <h3> Text content : </h3>
+ <p>Which of the following statements about the &lt;dt&gt; tag is true?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">This tag represents a description list.<br>
+  <input type="radio" name="blockquote" value="v2">This tag is the generic container for flow content.<br>
+  <input type="radio" name="blockquote" value="v3">This tag provides the description, definition, or value for the preceding term in a description list.<br>
+  <input type="radio" name="blockquote" value="v4">This tag indicates that the enclosed text is an extended quotation.<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[0].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='index.html'">Go to main page</button>
+</body>
+</html>
