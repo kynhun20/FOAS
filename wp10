@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>HTML09</title>
+</head>
+<body>
+ <h3> Table content : </h3>
+ <p>Which of the following statements about the &lt;th&gt; tag is true?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">This tag defines a group of columns within a table.<br>
+  <input type="radio" name="blockquote" value="v2">This tag defines a row of cells in a table.<br>
+  <input type="radio" name="blockquote" value="v3">This tag defines a cell of a table that contains data.<br>
+  <input type="radio" name="blockquote" value="v4">This tag defines a cell as header of a group of table cells.<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[3].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wp01.html'">Solve problem again!</button>
+</body>
+</html>
