@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>CSS04</title>
+</head>
+<body>
+ <h3> Text-align </h3>
+ <p>Which of the following statements about &lt;text-align&gt; tag is true?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">This tag sets the foreground color value of an element's text and text decorations, and sets the <currentcolor> value.<br>
+  <input type="radio" name="blockquote" value="v2">This tag sets whether an element must be moved below (cleared) floating elements that precede it.<br>
+  <input type="radio" name="blockquote" value="v3">This tag sets the horizontal alignment of the content inside a block element or table-cell box. <br>
+  <input type="radio" name="blockquote" value="v4">This tag sets the number of columns to use when drawing an element's contents, as well as those columns' widths.<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[2].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wpp04.html'">Question 4</button>
+</body>
+</html>
