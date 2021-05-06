@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>프로그래밍기초3주차</title>
+</head>
+<body>
+ <button onclick="myFucntion()">프로그래밍기초3주차4번</button>
+ <p id="check">정답 체크</p>
+ <img src="https://lh4.googleusercontent.com/ofzhagR45lAzJqaLG_h3vc16x9AC14LLfgZLSaPuWo-Rah-s3BvB1NQb4m6x3Sz18ESPQkvjeJ1-ycNxeK8ZSpLoqotPiH_0Q8Ri8pVivzBG9dIL4uQlRcyDfHmNqDRiRw=w417"/><br>
+ <script type="text/javascript">
+  function myFucntion() {
+   var answer = prompt(" I want to print ‘A’, when a grade is same or upper than 90. And print ‘B’, when a grade is same or upper than 80, but lower than 90. And print ‘F’, when a grade is lower than 80. But the following code doesn’t work correctly. modify the wrong part, following the form ‘(wrong part 1), (modified part 1) / (wrong part 2), (modified part 2) / (wrong part 3), (modified part 3) / ……’. (’scanf’ isn’t the wrong code.)");
+   if(answer=="grade>=80,grade>=80&&grade<=90") document.getElementById("check").innerHTML = "Correct.";
+   else document.getElementById("check").innerHTML = "Wrong.";
+  }
+ </script>
+<button onclick="location.href='bp0301.html'">Test against</button>
+</body>
+</html>
