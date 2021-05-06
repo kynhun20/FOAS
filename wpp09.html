@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>CSS04</title>
+</head>
+<body>
+ <h3> @import </h3>
+ <p>Which of the following statements about &lt;@import&gt; tag is true?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">This tag is a shorthand property for setting the individual logical block border property values in a single place in the style sheet.<br>
+  <input type="radio" name="blockquote" value="v2">This tag is used to import style rules from other style sheets.<br>
+  <input type="radio" name="blockquote" value="v3">This tag defines the horizontal or vertical size of an element's block, depending on its writing mode.<br>
+  <input type="radio" name="blockquote" value="v4">This tag participates in specifying the horizontal position of a positioned element.<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[1].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wpp10.html'">Question 10</button>
+</body>
+</html>
