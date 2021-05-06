@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>CSS03</title>
+</head>
+<body>
+ <h3> Background </h3>
+ <p>Which of the following statements about &lt;background&gt; tag is true?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">This tag defines the horizontal or vertical size of an element's block, depending on its writing mode.<br>
+  <input type="radio" name="blockquote" value="v2">This tag sets all background style properties at once, such as color, image, origin and size, or repeat method.<br>
+  <input type="radio" name="blockquote" value="v3">This tag participates in setting the vertical position of a positioned element. <br>
+  <input type="radio" name="blockquote" value="v4">This tag sets the margin area on all four sides of an element.<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[1].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wpp04.html'">Question 4</button>
+</body>
+</html>
