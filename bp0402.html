@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>프로그래밍기초3주차</title>
+</head>
+<body>
+ <button onclick="myFucntion()">프로그래밍기초3주차4번</button>
+ <p id="check">정답 체크</p>
+ <img src="https://lh4.googleusercontent.com/XmYqy4B1KCuSakcXJw-H8q2rF3-R2Z66TmbBnt6EomLDFWSWjdKA0-yu0P6rh8B16mdDJukDA3DuKeEoU9_uTWJx6IW5lCuqGJIZPXmdOO_EBkh3_1PftjjaEdJCGCsXUQ=w527"/><br>
+ <script type="text/javascript">
+  function myFucntion() {
+   var answer = prompt("2. 아래의 코드에서 잘못된 것을 수정하시오.,수정할 것,수정한 내용(변수를 바꾸려면 a로 바꾼다) ");
+   if(answer=="while,a,for();,for()") document.getElementById("check").innerHTML = "Correct.";
+   else document.getElementById("check").innerHTML = "Wrong.";
+  }
+ </script>
+ <button onclick="location.href='bp0403.html'">Question2 </button>
+</body>
+</html>
