@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>CSS07</title>
+</head>
+<body>
+ <h3> Padding </h3>
+ <p>Which of the following is NOT a Constant properties of &lt;padding&gt; tag?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">padding-bottom<br>
+  <input type="radio" name="blockquote" value="v2">padding-top<br>
+  <input type="radio" name="blockquote" value="v3">padding-left<br>
+  <input type="radio" name="blockquote" value="v4">padding-middle<br>
+  <input type="radio" name="blockquote" value="v5">padding-right<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[3].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wpp08.html'">Question 8</button>
+</body>
+</html>
