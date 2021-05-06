@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>프로그래밍기초</title>
+</head>
+<body>
+ <button onclick="myFucntion()">프로그래밍기초</button>
+ <p id="check">정답 체크</p>
+ <script type="text/javascript">
+  function myFucntion() {
+   var answer = prompt("67을 이진수로 바꾸세요");
+   if(answer=="1000011") document.getElementById("check").innerHTML = "Correct.";
+   else document.getElementById("check").innerHTML = "Wrong.";
+  }
+ </script>
+ <img src="https://lh3.googleusercontent.com/qufYMCNQGGDb1uyR9QJ6wQ4tGOgwXc8DXEV-P8NctEdRNVvdtfolZICblZdp92tJMGQ6idRfl5IdIvzdMAQBfyafHYAGzxJEofKKHT4C1QhPwzrPg8H2IWQEcLtbNMmNnA=w492"/>
+ <br><button onclick="location.href='bp0206.html'">Question 6</button>
+</body>
+</html>
