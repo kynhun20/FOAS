@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>CSS04</title>
+</head>
+<body>
+ <h3> Clear </h3>
+ <p>Which of the following statements about &lt;clear&gt; tag is true?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">This tag participates in specifying the vertical position of a positioned element.<br>
+  <input type="radio" name="blockquote" value="v2">This tag sets whether an element must be moved below (cleared) floating elements that precede it.<br>
+  <input type="radio" name="blockquote" value="v3">This tag sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex. <br>
+  <input type="radio" name="blockquote" value="v4">This tag sets all the different properties of an element's font.<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[1].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wpp06.html'">Question 6</button>
+</body>
+</html>
