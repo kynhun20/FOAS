@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>프로그래밍기초3주차</title>
+</head>
+<body>
+ <button onclick="myFucntion()">프로그래밍기초3주차1번</button>
+ <p id="check">정답 체크</p>
+ <script type="text/javascript">
+  function myFucntion() {
+   var answer = prompt("00110101(양의 정수) + 11010110(음의정수)");
+   if(answer=="11") document.getElementById("check").innerHTML = "Correct.";
+   else document.getElementById("check").innerHTML = "Wrong.";
+  }
+ </script>
+</body>
+<button onclick="location.href='bp0302.html'">Question 2</button>
+</html>
