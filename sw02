@@ -1,0 +1,149 @@
+<html>
+<head>
+
+<script language="JavaScript">
+
+if (window.focus) self.focus(); 
+
+var numQues = 5;
+
+
+var answers = new Array(numQues)
+answers[0] = "정답:NO";
+answers[1] = "정답:If I am a human than the Eiffle tower is in France. ";
+answers[2] = "정답:p^ㄱq";
+answers[3] = "정답:OR = 11 0111 1101 AND = 00 0001 0001 XOR = 11 0110 1100";
+answers[4] = "정답:ㄱ(X^Y)v(ㄱZvX)";
+
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+
+  for (i=0; i<numQues; i++) {
+    currElt = form.elements[i];
+    currSelection = currElt.selectedIndex;
+    if (currElt.options[currSelection].value == answers[i]) {
+      score++;
+    }
+  }
+
+  score = Math.round(score*5*5);
+  form.yourscore.value = score +"";
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i +  answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<table border=0 cellpadding=5 cellspacing=0>
+<tr><td colspan=2><br><br><br><font face="Arial, Helvetica" size=-1>
+<b>소프트웨어 수학2</b>
+</font><hr color=black></td></tr>
+
+<FORM name="quiz">
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>1.</b> Is x = 0 → x:= x+1 a proposition?
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q1">
+<OPTION value="">선택하세요.
+<option value="yes">
+YES
+<OPTION value="no">
+NO
+
+</SELECT>
+</font></td></tr>
+
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>2.</b> let p be the statement<br>"i am a human."<br>q be the statement<br> "the eiffel tower is in france."<br>express the statement p→q as a statement.
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q2">
+<OPTION value="">선택 하세요
+<OPTION value="If I am a human than the Eiffle tower is in France">
+If I am a human than the Eiffle tower is in France.
+<OPTION value="If the Eiffle tower is in France than I am a human ">
+If the Eiffle tower is in France than I am a human. 
+<OPTION value="If the Eiffle tower is in France than I am a human">
+If the Eiffle tower is in France than I am a human. 
+</SELECT>
+</font></td></tr>
+
+
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>3.</b>simplify p^ㄱ(p^q).
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q3">
+<OPTION value="">선택 하세요
+<OPTION value="x">ㄱq
+<OPTION value="x">pvㄱq
+<OPTION value="x">pvq
+<OPTION value="0">p^ㄱq
+<OPTION value="x">p^q
+</SELECT>
+</font></td></tr>
+
+
+<tr><td><font face="arial, helvetica" size=-1>
+<b>4.</b>find the biwise OR, bitwise AND,and bitwise XOR of bit string 11 0001 1101 and 00 0111 0001
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q4">
+<OPTION value="">선택 하세요
+<OPTION value="X">
+OR = 11 0111 0001
+AND = 00 0001 0001
+XOR = 11 0110 1100
+<OPTION value="O">
+OR = 11 0111 1101
+AND = 00 0001 0001
+XOR = 11 0110 1100
+<OPTION value="X">
+OR = 11 0111 1101
+AND = 11 0001 0001
+XOR = 11 0110 1100
+</SELECT>
+</font></td></tr>
+
+
+<tr><td><font face="arial, helvetica" size=-1>
+<b>5.</b><br><a href='https://ifh.cc/v-kzbB5d' target='_blank'><img src='https://ifh.cc/g/kzbB5d.png' border='0'></a>
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q5">
+<OPTION value="">선택 하세요
+<OPTION value="O">ㄱ(X^Y)v(ㄱZvX)
+<OPTION value="X">ㄱ(XvY)^(ㄱZ^X)
+<OPTION value="X">ㄱ(XvY)v(ㄱZ^X)
+<OPTION value="X">(X^Y)v(ㄱZvX)
+</SELECT>
+</font></td></tr>
+
+
+<tr><td colspan=2><font face="Arial, Helvetica" size=-1>
+<b><INPUT TYPE="button" value="퀴즈 정답" onClick="getScore(this.form)">
+<INPUT TYPE="reset" value="다시시작"></b>
+<p>
+
+<b></b> <INPUT TYPE=text SIZE=1 name="yourscore"><br>
+<b>퀴즈정답</b><br>
+<TEXTAREA name="solutions" WRAP="virtual" ROWS="4" COLS="40"></TEXTAREA>
+</td></tr>
+</table>
+</FORM>
+
+
+
+</body>
+</html>
