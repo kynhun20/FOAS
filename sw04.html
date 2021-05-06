@@ -1,0 +1,135 @@
+<html>
+<head>
+
+<script language="JavaScript">
+
+if (window.focus) self.focus(); 
+
+var numQues = 4;
+
+
+var answers = new Array(numQues)
+answers[0] = "정답:NO";
+answers[1] = "정답:If I am a human than the Eiffle tower is in France. ";
+answers[2] = "정답:1)Some x in your school have visited 가천 홈페이지. 2)Dongchan and Jiyeon have visited some websites";
+answers[3] = "정답:32 ";
+
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+
+  for (i=0; i<numQues; i++) {
+    currElt = form.elements[i];
+    currSelection = currElt.selectedIndex;
+    if (currElt.options[currSelection].value == answers[i]) {
+      score++;
+    }
+  }
+
+  score = Math.round(score*5*5);
+  form.yourscore.value = score +"";
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i +  answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<table border=0 cellpadding=5 cellspacing=0>
+<tr><td colspan=2><br><br><br><font face="Arial, Helvetica" size=-1>
+<b>소프트웨어 수학3</b>
+</font><hr color=black></td></tr>
+
+<FORM name="quiz">
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>1.</b> What is the cardinality of each of these sets?  <br>                      {∅, {{a}, {b}}, {a, b}}
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q1">
+<OPTION value="">선택하세요.
+<option value="no">
+1
+<OPTION value="no">
+2
+<OPTION value="yes">
+3
+
+</SELECT>
+</font></td></tr>
+
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>2.</b> Let g(x) = └x┘, Find  next <br>                                                    g−1({x ∣ 0 < x < 1}) 
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q2">
+<OPTION value="">선택 하세요
+<OPTION value="If I am a human than the Eiffle tower is in France">
+If I am a human than the Eiffle tower is in France.
+<OPTION value="If the Eiffle tower is in France than I am a human ">
+If the Eiffle tower is in France than I am a human. 
+<OPTION value="If the Eiffle tower is in France than I am a human">
+If the Eiffle tower is in France than I am a human. 
+</SELECT>
+</font></td></tr>
+
+
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>3.</b>Look at the next picture and write the answer. <br> <br>        1)∃x W(x,가천 홈페이지)<br>                                   2)∃y(W(DongChan, y) ∧ W(Jiyeon, y))<br><br>
+Let W(x, y) mean that student x has visited website y.
+where domain for x consists of all students in your
+school and domain for y consists of all websites. Express
+each of these statements by a simple English sentence.
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q3">
+<OPTION value="">선택 하세요
+
+<OPTION value="x">pvㄱq
+
+<OPTION value="0">1)Some x in your school have visited 가천 홈페이지.
+2)Dongchan and Jiyeon have visited some websites
+<OPTION value="x">1)Some x in your school have visited 가천 홈페이지.
+2)Dongchan and Jiyeon have visited some websites
+</SELECT>
+</font></td></tr>
+
+
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>4.</b> There is two sets, A={1,2,3,4} and B={2,4,6}. Write the power set of A∩B, and write the cardinality of A∪B. <br>(Do not write 2^(A∩B) for the first answer.)
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q4">
+<OPTION value="">선택 하세요
+<OPTION value="O">32
+<OPTION value="X">43
+<OPTION value="X">23
+</SELECT>
+</font></td></tr>
+
+
+
+
+<tr><td colspan=2><font face="Arial, Helvetica" size=-1>
+<b><INPUT TYPE="button" value="퀴즈 정답" onClick="getScore(this.form)">
+<INPUT TYPE="reset" value="다시시작"></b>
+<p>
+
+<b></b> <INPUT TYPE=text SIZE=1 name="yourscore"><br>
+<b>퀴즈정답</b><br>
+<TEXTAREA name="solutions" WRAP="virtual" ROWS="4" COLS="40"></TEXTAREA>
+</td></tr>
+</table>
+</FORM>
+
+
+
+</body>
+</html>
