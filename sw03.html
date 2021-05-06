@@ -1,0 +1,143 @@
+<html>
+<head>
+
+<script language="JavaScript">
+
+if (window.focus) self.focus(); 
+
+var numQues = 4;
+
+
+var answers = new Array(numQues)
+answers[0] = "문제 T T F T T/T F F F F/F T T T T/F F T T T";
+answers[1] = "문제 TF 번 정답";
+answers[2] = "문제 (∀xP(x))VQ(x) 번 정답";
+answers[3] = "문제 O 번 정답";
+
+
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+
+  for (i=0; i<numQues; i++) {
+    currElt = form.elements[i];
+    currSelection = currElt.selectedIndex;
+    if (currElt.options[currSelection].value == answers[i]) {
+      score++;
+    }
+  }
+
+  score = Math.round(score*5*5);
+  form.yourscore.value = score +"";
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i +  answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<table border=0 cellpadding=5 cellspacing=0>
+<tr><td colspan=2><br><br><br><font face="Arial, Helvetica" size=-1>
+<b>소프트웨어 수학</b>
+</font><hr color=black></td></tr>
+
+<FORM name="quiz">
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>1.</b>Write the truth table of the formula (ㄱp∨q)?
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q1">
+<OPTION value="">선택 하세요
+<OPTION value="T T F T T
+T F F F F
+F T T T T
+F F T T T">
+T T F T T/
+T F F F F/
+F T T T T/
+F F T T T
+<OPTION value="T T F T T
+T F F F F
+F T T T T
+F F T T T">
+T T T T T/
+T F T F F/
+F T T T T/
+F T T T T
+<OPTION value="T T F T T
+T F F F F
+F T T T T
+F F T T T">
+T T F T T/
+T F F F F/
+F T F T T/
+F F T T F
+</SELECT>
+</font></td></tr>
+
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>2.</b> 
+Determine the truth value of each of these statements if the domain for all variables consists of all integers.
+<br> 
+1.∀n∃m(n+m=0) 2.∃n∃m(n*n+m*m=6) 
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q2">
+<OPTION value="">선택 하세요
+<OPTION value="1.∀n∃m(n+m=0) ">TT
+<OPTION value="2.∃n∃m(n*n+m*m=6) ">TF
+<OPTION value="2.∃n∃m(n*n+m*m=6) ">FF
+<OPTION value="2.∃n∃m(n*n+m*m=6) ">FT
+</SELECT>
+</font></td></tr>
+
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>3.</b>∀xP(x)VQ(x) precedence
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q3">
+<OPTION value="">선택 하세요
+<OPTION value="(∀xP(x))VQ(x)">(∀xP(x))VQ(x)
+<OPTION value="∀x(P(x)VQ(x))">∀x(P(x)VQ(x))
+</SELECT>
+</font></td></tr>
+
+<tr><td><font face="Arial, Helvetica" size=-1>
+<b>4.</b>"All the students attended the class." negation of this sentence ∀(x)students, J(x)attended the class
+<br>
+=>∃(x)students,not J(x)attended the class.(O/X)
+</font></td>
+<td><font face="Arial, Helvetica" size=-1>
+<SELECT name="q4">
+<OPTION value="">선택 하세요
+<OPTION value="O">O
+<OPTION value="X">X
+
+</SELECT>
+</font></td></tr>
+
+
+<tr><td colspan=2><font face="Arial, Helvetica" size=-1>
+<b><INPUT TYPE="button" value="퀴즈 정답" onClick="getScore(this.form)">
+<INPUT TYPE="reset" value="다시시작"></b>
+<p>
+
+<b></b> <INPUT TYPE=text SIZE=1 name="yourscore"><br>
+<b>퀴즈정답 :</b><br>
+<TEXTAREA name="solutions" WRAP="virtual" ROWS="4" COLS="40"></TEXTAREA>
+</td></tr>
+</table>
+</FORM>
+
+
+
+</body>
+</html>
