@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>퀴즈 프로그램 만들기</title>
+</head>
+<body>
+ <h1>프로그래밍기초3주차</h1>
+ <p> <b>3.</b>다음과 같은 화면이 나오게 프로그래밍한 코드를 고르시오(21,20,어르신 3가지로 구성</p>
+ <img src="https://lh5.googleusercontent.com/7jUxbC3hqTJDAUfn3qietntITVb-BHtZdAhdBNEObdwZ5a7-AKrBQqNDAFvkxSTfj2DKd_GM0QamQnPPg5vnoUvtiFZjHhWgSwV1Vtc3oXCdTCtGslxJBTsvIMR44qn_MA=w740"/>
+ <form name="form">
+  <input type="radio" name="pro" value="v1"><br><img src="https://blogfiles.pstatic.net/MjAyMTA1MDZfMzQg/MDAxNjIwMzEwOTgzNTcz.l5tmWBnW3oDIX195-s9gWOftyv93ud04nXUVIaiblKYg.s-HWQRXms3qUy4iUyFN3bsBA-LLR5mvRTc0yaO4w-AUg.PNG.kdch1204/%EC%BA%A1%EC%B2%98.PNG"/><br>
+  <input type="radio" name="pro" value="v2"><br><img src="https://postfiles.pstatic.net/MjAyMTA1MDZfMTky/MDAxNjIwMzEwODU2MzAz.M96uCC2X4s4TQrJaABTeSbn44zEajgbqu2_sSn6L1b8g.SbfBqRLxmkclHCAbWENedU1XxjF5m0mLDb2ZIiQSTW0g.PNG.kdch1204/%EC%BA%A1%EC%B2%98.PNG?type=w773"/><br>
+  <input type="radio" name="pro" value="v3"><br><img src="https://postfiles.pstatic.net/MjAyMTA1MDZfNjcg/MDAxNjIwMzEwODk0NTgy.LeepPJraueRbepJs-s9vD3pIpnLXlywylv-vGTelyCYg._rg-rUdT48Rye6yrh4sZByo8LNlkkkDzWd24uHa6ZU8g.PNG.kdch1204/%EC%BA%A1%EC%B2%98.PNG?type=w773"/><br>
+  <input type="radio" name="pro" value="v4"><br><img src="https://postfiles.pstatic.net/MjAyMTA1MDZfNTcg/MDAxNjIwMzEwNzk2NDc5.y4USmMFZiYKtOqj_SrfkeAIBxOJ5-piBbkvlKO_m-jkg.u3UgPApBpLk64a8en7R4E1IDkSJUqPIT2pMH5wAqL8Yg.PNG.kdch1204/%EC%BA%A1%EC%B2%98.PNG?type=w773"/><br>
+  <input type="button" name="선택" value="정답확인" onclick="myFucntion()">
+ </form>
+ <p id="check"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.pro[3].checked==true) document.getElementById("check").innerHTML="Correct.";
+   else document.getElementById("check").innerHTML="Wrong.";
+  }
+  </script>
+  
+  <button onclick="location.href='bp0303.html'">Question 3</button>
+  </body>
+  </html>
