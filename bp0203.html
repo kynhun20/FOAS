@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>퀴즈 프로그램 만들기</title>
+</head>
+<body>
+ <h1>프로그래밍기초2주차</h1>
+ <p> <b>3.</b>3. 정수형 char의 바이트 크기를 고르시오.?</p>
+ <form name="form">
+  <input type="radio" name="pro" value="v1">1바이트<br>
+  <input type="radio" name="pro" value="v2">2바이트<br>
+  <input type="radio" name="pro" value="v3">4바이트<br>
+  <input type="radio" name="pro" value="v4">8바이트<br>
+  <input type="button" name="선택" value="정답확인" onclick="myFucntion()">
+ </form>
+ <p id="check"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.pro[0].checked==true) document.getElementById("check").innerHTML="Correct.";
+   else document.getElementById("check").innerHTML="Wrong.";
+  }
+  </script>
+  <button onclick="location.href='bp0204.html'">Question 4</button>
+  </body>
+  </html>
