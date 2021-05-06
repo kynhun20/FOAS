@@ -5,19 +5,19 @@
  <title>CSS01</title>
 </head>
 <body>
- <h3> Text content : </h3>
- <p>Which of the following statements about the &lt;blockquote&gt; tag is true?</p>
+ <h3> Border </h3>
+ <p>Which of the following is NOT a Constant properties of &lt;border&gt; tag?</p>
  <form name="form">
-  <input type="radio" name="blockquote" value="v1">This tag indicates that the enclosed text is an extended quotation.<br>
-  <input type="radio" name="blockquote" value="v2">This tag is the generic container for flow content.<br>
-  <input type="radio" name="blockquote" value="v3">This tag represents a thematic break between paragraph-level elements<br>
-  <input type="radio" name="blockquote" value="v4">This tag is used to represent an item in a list.<br><br>
+  <input type="radio" name="blockquote" value="v1">border-color<br>
+  <input type="radio" name="blockquote" value="v2">border-style<br>
+  <input type="radio" name="blockquote" value="v3">border-width<br>
+  <input type="radio" name="blockquote" value="v4">border-outline<br><br>
   <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
  </form>
  <p id="blockquote"></p>
  <script type="text/javascript">
   function myFucntion() {
-   if(form.blockquote[0].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   if(form.blockquote[3].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
    else document.getElementById("blockquote").innerHTML="That's wrong.";
   }
   </script>
