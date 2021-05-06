@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>CSS01</title>
+</head>
+<body>
+ <h3> Margin </h3>
+ <p>Which of the following statements about &lt;margin&gt; tag is true?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">This tag sets the margin area on all four sides of an element.<br>
+  <input type="radio" name="blockquote" value="v2">This tag sets an element's border.<br>
+  <input type="radio" name="blockquote" value="v3">This tag defines the horizontal or vertical size of an element's block, depending on its writing mode.<br>
+  <input type="radio" name="blockquote" value="v4">This tag sets the distribution of space between and around content items along a flexbox's cross-axis or a grid's block axis.<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[0].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wpp03.html'">Question 3</button>
+</body>
+</html>
