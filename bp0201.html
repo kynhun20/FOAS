@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>퀴즈 프로그램 만들기</title>
+</head>
+<body>
+ <h1>프로그래밍기초2주차</h1>
+ <p> <b>1.</b>임의의 숫자 2개를 입력 받아 사칙연산(*, /, +, -)의 결과 값이 나오도록 코드를 짜주세요.(단, main 부분만 작성.)</p>
+ <form name="form">
+  <input type="radio" name="pro" value="v1"><br>int a,b;<br>scanf_s("%d %d",&a,&b);<br>prinf("%d",a+b);<br>prinf("%d",a-b);<br>prinf("%d",axb);prinf("%d",a/b);<br>
+  <input type="radio" name="pro" value="v2"><br>int a,b;<br>scanf_s("%d %d",&a,&b);<br>prinf("%d",a+b);<br>prinf("%d",a-b);<br>prinf("%d",a*b);prinf("%d",a/b);<br>
+  <input type="radio" name="pro" value="v3"><br>int while,b;<br>scanf_s("%d %d",&while,&b);<br>prinf("%d",while+b);<br>prinf("%d",while-b);<br>prinf("%d",while*b);prinf("%d",while/b);<br>
+  <input type="radio" name="pro" value="v4"><br>int a,b;<br>scanf_s("%d %d",a,b);<br>prinf("%d",a+b);<br>prinf("%d",a-b);<br>prinf("%d",a*b);prinf("%d",a/b);<br>
+  <input type="button" name="선택" value="정답확인" onclick="myFucntion()">
+ </form>
+ <p id="check"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.pro[1].checked==true) document.getElementById("check").innerHTML="Correct.";
+   else document.getElementById("check").innerHTML="Wrong.";
+  }
+  </script>
+  <button onclick="location.href='bp0202.html'">Question 2</button>
+  </body>
+  </html>
