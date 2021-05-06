@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>CSS06</title>
+</head>
+<body>
+ <h3> Font </h3>
+ <p>Which of the following is NOT a Constant properties of &lt;font&gt; tag?</p>
+ <form name="form">
+  <input type="radio" name="blockquote" value="v1">font-family<br>
+  <input type="radio" name="blockquote" value="v2">font-size<br>
+  <input type="radio" name="blockquote" value="v3">font-stretch<br>
+  <input type="radio" name="blockquote" value="v4">font-style<br>
+   <input type="radio" name="blockquote" value="v5">font-property<br>
+   <input type="radio" name="blockquote" value="v6">font-weight<br>
+   <input type="radio" name="blockquote" value="v7">line-height<br><br>
+  <input type="button" name="Choose" value="Check the answers" onclick="myFucntion()">
+ </form>
+ <p id="blockquote"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.blockquote[4].checked==true) document.getElementById("blockquote").innerHTML="That's right.";
+   else document.getElementById("blockquote").innerHTML="That's wrong.";
+  }
+  </script>
+  <button onclick="location.href='wpp07.html'">Question 7</button>
+</body>
+</html>
