@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>퀴즈 프로그램 만들기</title>
+</head>
+<body>
+ <h1>프로그래밍기초4주차</h1>
+ <p> <b>1.</b>두 정수를 입력하고 switch구문을 활용하여 사칙연산의 값을 구하시오.</p>
+ <form name="form">
+  <input type="radio" name="pro" value="v1"><br>void main(){<br>int a,b;<br>char c;<br>scanf("%d %d %d",&a,,&b,&c);<br>switch(c) {<br>case'+':<br>printf("%d,a+b);<br>break;<br>case'-':<br>printf("%d",a-b);<br>break;<br>case'/':<br> printf("%d,a/b);<br>break;<br>case'*':<brprintf("%d".a*b);<br>}<br>}<br>
+  <input type="radio" name="pro" value="v2"><br>void main(){<br>int a,b;<br>int c;<br>scanf("%d %d %d",&a,,&b,&c);<br>switch(c) {<br>case'+':<br>printf("%d,a+b);<br>break;<br>case'-':<br>printf("%d",a-b);<br>break;<br>case'/':<br> printf("%d,a/b);<br>break;<br>case'*':<brprintf("%d".a*b);<br>}<br>}<br>
+  <input type="radio" name="pro" value="v3"><br>void main(){<br>int a,b;<br>char c;<br>scanf("%d %d %c",&a,,&b,&c);<br>switch(c) {<br>case'+':<br>printf("%d,a+b);<br>break;<br>case'-':<br>printf("%d",a-b);<br>break;<br>case'/':<br> printf("%d,a/b);<br>break;<br>case'*':<brprintf("%d".a*b);<br>}<br>}<br>
+  <input type="radio" name="pro" value="v4"><br>void main(){<br>int a,b;<br>char c;<br>scanf("%d %d %d",&a,,&b,&c);<br>switch(c) {<br>case'+':<br>printf("%d,a+b);<br>case'-':<br>printf("%d",a-b);<br>break;<br>case'/':<br> printf("%d,a/b);<br>break;<br>case'*':<brprintf("%d".a*b);<br>}<br>}<br>
+  <input type="button" name="선택" value="정답확인" onclick="myFucntion()">
+ </form>
+ <p id="check"></p>
+ <script type="text/javascript">
+  function myFucntion() {
+   if(form.pro[2].checked==true) document.getElementById("check").innerHTML="Correct.";
+   else document.getElementById("check").innerHTML="Wrong.";
+  }
+  </script>
+  
+  <button onclick="location.href='bp0402.html'">Question2 </button>
+  </body>
+  </html>
